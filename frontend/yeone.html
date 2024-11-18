@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>따뜻한 예원</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="yeone.css">
+</head>
+<body>
+    <div id="intro" class="intro-container">
+        <img src="yeone.png" alt="yeone">
+        <h1>명재현에게 날씨물어보기</h1>
+    </div>
+    <div class="background-image">
+        <img src="yeone.jpg" alt="yeone2">
+    </div>
+    <div class="chat-container">
+        <div class="chat-bubble bot-bubble" id="fortuneResponse">
+            <!-- The fortune response will appear here -->
+        </div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="궁금한 것을 물어보세요!">
+            <button id="sendMessage">보내기</button>
+        </div>
+    </div>
+    <script src="yeone.js"></script>
+    <script>
+        document.querySelectorAll('.switchBot').forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = button.getAttribute('data-target');
+            });
+        });
+    </script>
+</body>
+</html>

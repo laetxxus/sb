@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #92b99c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #0A4E16;
+}
+
+.chat-container {
+    width: 80%;
+    max-width: 600px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex; /* 추가 */
+    flex-direction: column; /* 추가 */
+}
+
+.chat-box {
+    padding: 20px;
+    height: 250px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    flex-grow: 1;
+}
+
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.chat-input button {
+    padding: 10px;
+    border: none;
+    background: #0A4E16;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.chat-input button:hover {
+    background: #094011;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100%; /* 말풍선의 최대 너비 설정 */
+    margin: 5px; /* 모든 방향에 10px 여백 추가 */
+    padding: 15px; /* 말풍선 내부에 15px 패딩 추가 */
+    border-radius: 10px; /* 둥근 모서리 적용 */
+    position: relative; /* 상대 위치로 설정하여 나중에 추가적인 스타일 조정 가능 */
+    font-size: 15px; /* 폰트 크기 설정 */
+    line-height: 1.5; /* 줄 간격 설정 */
+    word-wrap: break-word; /* 긴 단어가 말풍선을 넘어가지 않도록 설정 */
+}
+
+.message.user {
+    color: #000000;
+
+    background-color: #699469; /* 연한 녹색 배경색 설정 */
+    text-align: right; /* 오른쪽 정렬 */
+    margin-left: 30%; /* 왼쪽 여백 자동으로 설정하여 오른쪽 정렬 */
+}
+
+.message.bot {
+    color: #ffffff;
+
+    background-color: #565656; /* 연한 회색 배경색 설정 */
+    text-align: left; /* 왼쪽 정렬 */
+    margin-right: 30%; /* 오른쪽 여백 자동으로 설정하여 왼쪽 정렬 */
+}
+
+.message-time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+.chat-bot-switch {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.switchBot {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background: #6ca573;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+}
+
+.switchBot:hover {
+    background: #35773f;
+}
+.intro-container {
+    display: flex;  /* 다른 요소가 추가되더라도 비율 유지한 채로 레이아웃 정렬 */
+    flex-direction: column; /* 수직 구성 */                
+    justify-content: center;  /* 가로선에서 정렬 */
+    align-items: center;  /* 세로선에서 정렬  */
+}
+    
+/* 이미지 크기 조절하기 */                        
+.intro-container img {
+    width: 15%;
+    min-width: 1px;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+	font-family: 'Pretendard-Regular';
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image.jpg'); /* 사용하고 싶은 이미지 파일 경로 */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1; /* 투명도 설정 */
+    z-index: -1; /* 콘텐츠 위에 겹치지 않도록 설정 */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* 콘텐츠가 배경 이미지 위에 표시되도록 설정 */
+    color: black; /* 텍스트 색상 설정 */
+    padding: 20px;
+}
